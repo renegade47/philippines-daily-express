@@ -1,0 +1,73 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel">
+        <div class="panel-body">
+          {{#each topCommented}}
+          <h2>Top Commented</h2>
+          <hr>
+          <h3>{{this.title}}</h3>
+          <span class="author">by <a href="https://steemit.com/@{{author}}" target="_blank">{{this.author}}</a></span>
+          <hr>
+          {{!-- <div class="img-container" style="width: 100%; height: 300px; position: relative; overflow: hidden;"> --}}
+            <img src="{{this.image}}" alt="">
+          {{!-- </div> --}}
+          <p>{{this.excerpt}}</p>
+          <h4>Stats</h4>
+          <p>Created: {{this.created}}</p>
+          <p>Number of Comments: {{this.numberofComments}}</p>
+          <p>Total Upvotes: {{this.net_votes}}</p>
+          <p>Pending Rewards: ${{this.reward}}</p>
+          <a href="https://steemit.com{{this.link}}" role="button" class="btn btn-default" target="_blank">View post on Steemit</a>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="panel panel--bordered">
+        <div class="panel-body">
+          <h2>Top Upvoted</h2>
+          {{#each topUpvoted}}
+          <hr>
+          <h3>{{this.title}}</h3>
+          <span class="author">by <a href="https://steemit.com/@{{author}}" target="_blank">{{this.author}}</a></span>
+          <hr>
+          {{!-- <div class="img-container" style="width: 100%; height: 300px; position: relative; overflow: hidden;"> --}}
+            <img src="{{this.image}}" alt="">
+          {{!-- </div> --}}
+          <p>{{this.excerpt}}</p>
+          <h4>Stats</h4>
+          <p>Created: {{this.created}}</p>
+          <p>Number of Comments: {{this.numberofComments}}</p>
+          <p>Total Upvotes: {{this.net_votes}}</p>
+          <p>Pending Rewards: ${{this.reward}}</p>
+          <a href="https://steemit.com{{this.link}}" role="button" class="btn btn-default" target="_blank">View post on Steemit</a>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="panel">
+        <div class="panel-body">
+          <h2>Top Rewards</h2>
+          {{#each topRewards}}
+          <hr>
+          <h3>{{this.title}}</h3>
+          <span class="author">by <a href="https://steemit.com/@{{author}}" target="_blank">{{this.author}}</a></span>
+          <hr>
+          {{!-- <div class="img-container" style="width: 100%; height: 300px; position: relative; overflow: hidden;"> --}}
+            <img src="{{this.image}}" alt="">
+          {{!-- </div> --}}
+          <p>{{this.excerpt}}</p>
+          <h4>Stats</h4>
+          <p>Created: {{this.created}}</p>
+          <p>Number of Comments: {{this.numberofComments}}</p>
+          <p>Total Upvotes: {{this.net_votes}}</p>
+          <p>Pending Rewards: ${{this.reward}}</p>
+          <a href="https://steemit.com{{this.link}}" role="button" class="btn btn-default" target="_blank">View post on Steemit</a>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+{
+  "name": "fancy-cell",
+  "version": "1.0.0",
+  "description": "My app description",
+  "scripts": {
+    "deploy": "npm test && git push heroku master",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "compression": "^1.6.2",
+    "date-and-time": "^0.6.2",
+    "dotenv": "^2.0.0",
+    "excerpt-html": "^1.2.0",
+    "express": "^4.13.4",
+    "express-flash": "0.0.2",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.2.1",
+    "express-validator": "^2.20.4",
+    "handlebars-helper-md": "^0.2.0",
+    "is-valid-json": "^1.0.2",
+    "method-override": "^2.3.5",
+    "morgan": "^1.7.0",
+    "nodemailer": "^2.3.0",
+    "same-height": "^1.0.0",
+    "seriate": "^0.13.1",
+    "showdown": "^1.8.6",
+    "truncatise": "0.0.6"
+  },
+  "devDependencies": {
+    "handlebars-helper-md": "*"
+  },
+  "engines": {
+    "node": "6.1.0"
+  },
+  "keywords": [
+    "handlebars-helper-md"
+  ]
+}
