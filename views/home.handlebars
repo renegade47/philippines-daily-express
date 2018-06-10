@@ -18,7 +18,7 @@
           <p>Number of Comments: {{this.numberofComments}}</p>
           <p>Total Upvotes: {{this.net_votes}}</p>
           <p>Pending Rewards: ${{this.reward}}</p>
-          <a href="https://steemit.com{{this.link}}" role="button" class="btn btn-default" target="_blank">View post on Steemit</a>
+          <button type="button" class="btn btn-default" data-toggle="modal" data-target=".top-commented">View Post</button>
           {{/each}}
         </div>
       </div>
@@ -41,7 +41,7 @@
           <p>Number of Comments: {{this.numberofComments}}</p>
           <p>Total Upvotes: {{this.net_votes}}</p>
           <p>Pending Rewards: ${{this.reward}}</p>
-          <a href="https://steemit.com{{this.link}}" role="button" class="btn btn-default" target="_blank">View post on Steemit</a>
+          <button type="button" class="btn btn-default" data-toggle="modal" data-target=".top-upvoted">View Post</button>
           {{/each}}
         </div>
       </div>
@@ -64,10 +64,75 @@
           <p>Number of Comments: {{this.numberofComments}}</p>
           <p>Total Upvotes: {{this.net_votes}}</p>
           <p>Pending Rewards: ${{this.reward}}</p>
-          <a href="https://steemit.com{{this.link}}" role="button" class="btn btn-default" target="_blank">View post on Steemit</a>
+          <button type="button" class="btn btn-default" data-toggle="modal" data-target=".top-rewarded">View Post</button>
           {{/each}}
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div id="modals">
+  <div class="modal fade top-commented" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      {{#each topCommented}}
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">{{this.title}}</h4>
+        </div>
+        <div class="modal-body">
+          {{{this.html}}}
+        </div>
+        <div class="modal-footer">
+          <a href="https://steemit.com{{this.link}}" target="_blank" class="btn btn-default">View post on Steemit</a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://steemit.com/{{this.link}}" class="btn btn-default" target="_blank">Share on Facebook</a>
+          <a class="btn btn-default" href="https://twitter.com/intent/tweet?url=https://steemit.com/{{this.link}}" target="_blank">Share on Twitter</a>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+  <div class="modal fade top-upvoted" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      {{#each topUpvoted}}
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">{{this.title}}</h4>
+        </div>
+        <div class="modal-body">
+          {{{this.html}}}
+        </div>
+        <div class="modal-footer">
+          <a href="https://steemit.com{{this.link}}" target="_blank" class="btn btn-default">View post on Steemit</a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://steemit.com/{{this.link}}" class="btn btn-default" target="_blank">Share on Facebook</a>
+          <a class="btn btn-default" href="https://twitter.com/intent/tweet?url=https://steemit.com/{{this.link}}" target="_blank">Share on Twitter</a>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+  <div class="modal fade top-rewarded" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      {{#each topRewards}}
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">{{this.title}}</h4>
+        </div>
+        <div class="modal-body">
+          {{{this.html}}}
+        </div>
+        <div class="modal-footer">
+          <a href="https://steemit.com{{this.link}}" target="_blank" class="btn btn-default">View post on Steemit</a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://steemit.com/{{this.link}}" class="btn btn-default" target="_blank">Share on Facebook</a>
+          <a class="btn btn-default" href="https://twitter.com/intent/tweet?url=https://steemit.com/{{this.link}}" target="_blank">Share on Twitter</a>
+        </div>
+      </div>
+      {{/each}}
     </div>
   </div>
 </div>

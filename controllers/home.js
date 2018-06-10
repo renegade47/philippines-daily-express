@@ -91,6 +91,7 @@ exports.index = function(req, res) {
  			var topCommentedArray = [
  				{
  					title: sets.topCommented[0].title,
+ 					html: topCommentedHTML,
  					excerpt: topCommentedX,
  					image: topCommentedImage,
  					created: c_created,
@@ -135,6 +136,7 @@ exports.index = function(req, res) {
  			var topUpvotedArray = [
  				{
  					title: topUpvoted[0].title,
+ 					html: topUpvotedHTML,
  					excerpt: topUpvotedExcerpt,
  					image: topUpvotedImage,
  					created: u_created,
@@ -180,6 +182,7 @@ exports.index = function(req, res) {
  			var topRewardsArray = [
  				{
  					title: topRewards[0].title,
+ 					html: topRewardsHTML,
  					excerpt: topRewardsExcerpt,
  					image: topRewardsImage,
  					created: r_created,

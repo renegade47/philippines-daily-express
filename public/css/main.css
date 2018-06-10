@@ -361,3 +361,8 @@ footer {
 .panel-body {
   word-wrap: break-word;
 }
+
+
+.modal img {
+  max-width: 100%;
+}
