@@ -12,25 +12,25 @@
 
 1. Make sure Node.js is installed on your device.
 2. Clone the repository using your command line/terminal.
-<code>
+<pre>
 git clone https://github.com/renegade47/philippines-daily-express.git
-</code>
+</pre>
 3. Go to the project directory
-<code>
+<pre>
 cd philippines-daily-express
-</code>
+</pre>
 4. In the command line enter: run npm install
-<code>
+<pre>
 npm install
-</code>
+</pre>
 5. Next In the command line enter: node setup.js
-<code>
+<pre>
 node setup.js
-</code>
+</pre>
 6. To run the app in the command line enter: node server.js
-<code>
+<pre>
 node server.js
-</code>
+</pre>
 7. Go to http://localhost:3000
 
 ### Usage Instructions
